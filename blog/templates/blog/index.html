@@ -5,6 +5,10 @@
     <title>博客列表页</title>
 </head>
 <body>
-<p>Hello world!</p>
+<ul>
+    {% for article in articles %}
+        <li><a href=''>{{ article.title }}</a></li>
+    {% endfor %}
+</ul>
 </body>
 </html>
