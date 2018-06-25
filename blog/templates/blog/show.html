@@ -5,6 +5,8 @@
     <title>博客详情页</title>
 </head>
 <body>
+<a href={% url 'article_index' %}>返回首页</a>
+
 <h1>{{ article.title }}</h1>
 
 <p>{{ article.content }}</p>
