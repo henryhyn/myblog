@@ -5,6 +5,7 @@
     <title>博客列表页</title>
 </head>
 <body>
+<a href={% url 'article_new' %}>新建</a>
 <ul>
     {% for article in articles %}
         <li><a href={% url 'article_show' article.id %}>{{ article.title }}</a></li>
