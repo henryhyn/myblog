@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', blog.index, name='article_index'),
     path('articles/<int:id>', blog.show, name='article_show'),
+    path('articles/<int:id>/edit', blog.edit, name='article_edit'),
+    path('articles', blog.save, name='article_save'),
 ]

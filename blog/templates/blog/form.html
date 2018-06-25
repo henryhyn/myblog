@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>博客编辑页面</title>
+</head>
+<body>
+<form action={% url 'article_save' %} method='post'>
+    {% csrf_token %}
+    <input type='hidden' name='id' value='{{ article.id }}'>
+    <label for='title'>
+        <input type='text' name='title' value='{{ article.title }}'>
+    </label>
+    <br>
+    <label for='content'>
+        <input type='text' name='content' value='{{ article.content }}'>
+    </label>
+    <br>
+    <input type='submit'>
+</form>
+</body>
+</html>
