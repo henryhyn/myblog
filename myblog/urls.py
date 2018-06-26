@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import blog.views as blog
+import api.views as api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('articles/new', blog.new, name='article_new'),
     path('articles/<int:id>/edit', blog.edit, name='article_edit'),
     path('articles', blog.save, name='article_save'),
+    path('similar_word', api.similar_word, name='similar_word'),
 ]
